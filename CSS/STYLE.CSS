@@ -168,6 +168,6 @@ article, section, .tabela {
 }
 .bordaTexto{
     -webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: #000000; 
-color: #ff0000;
+    -webkit-text-stroke-color: #000000; 
+    color: #ff0000;
 }
