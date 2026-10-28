@@ -1,0 +1,6 @@
+Coloque aqui as imagens de exemplo usadas em manga.html:
+
+  webcomic-one.jpg   -> uma página/quadro do webcomic original de ONE
+  manga-murata.jpg   -> a mesma cena (de preferência) no mangá de Yusuke Murata
+
+Usar a mesma cena nas duas imagens deixa a comparação entre os traços bem mais clara.

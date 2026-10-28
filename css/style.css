@@ -28,8 +28,15 @@ article, section {
 img {
     max-width: 100%;
 }
-/* Cabeçalho do menu (com parallax) */
+/* Cabeçalho do menu (com parallax) (com parallax) */
 .containerHeader{
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     min-height: 320px;
@@ -39,6 +46,19 @@ img {
     align-items: center;
     padding: 16px 24px;
     border-bottom: 4px solid #d62828;
+    background-color: #111111;
+    background-image: linear-gradient(rgba(17, 17, 17, 0.35), rgba(17, 17, 17, 0.85)), url("../images/background-OPM.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    /* Fallback em CSS puro: o fundo fica parado enquanto a página rola */
+    background-attachment: fixed;
+}
+
+.containerHeader h1,
+.containerHeader nav {
+    position: relative;
+    transform: translateY(var(--deslocamento-conteudo, 0));
+    opacity: var(--opacidade-conteudo, 1);
     background-color: #111111;
     background-image: linear-gradient(rgba(17, 17, 17, 0.35), rgba(17, 17, 17, 0.85)), url("../images/background-OPM.jpg");
     background-size: cover;
@@ -200,6 +220,90 @@ article, section, .tabela {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000; 
     color: #ff0000;
+}
+
+/* ===== GALERIA (Sobre o anime) ===== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.galeria figure,
+.exemploManga figure {
+    margin: 0;
+    border: 3px solid #111111;
+    box-shadow: 4px 4px 0 #111111;
+    background-color: #111111;
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s;
+}
+
+.galeria figure:hover img {
+    transform: scale(1.05);
+}
+
+.galeria figure {
+    overflow: hidden;
+}
+
+.galeria .destaque {
+    grid-column: 1 / -1;
+}
+
+.galeria .destaque img {
+    height: 320px;
+    object-position: center;
+}
+
+.galeria figcaption,
+.exemploManga figcaption {
+    position: relative;
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+/* ===== EXEMPLOS DE MANGÁ ===== */
+
+.exemploManga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 16px 0;
+}
+
+.exemploManga figure {
+    flex: 1;
+    min-width: 240px;
+}
+
+.exemploManga img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    background-color: #ffffff;
+    /* aparece enquanto a imagem não existe/carrega */
+    color: #777777;
+    font-style: italic;
+    text-align: center;
+}
+
+.comparacao {
+    text-align: left;
 }
 
 /* ===== GALERIA (Sobre o anime) ===== */
